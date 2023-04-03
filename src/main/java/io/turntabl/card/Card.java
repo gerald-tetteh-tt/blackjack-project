@@ -11,4 +11,9 @@ public class Card {
     public int getValue() {
         return value.getValue();
     }
+
+    @Override
+    public String toString() {
+        return value.name() + " of " + suit.name();
+    }
 }

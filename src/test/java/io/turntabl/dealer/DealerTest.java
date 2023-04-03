@@ -15,6 +15,7 @@ class DealerTest {
     @BeforeEach
     void setUp() {
         dealer = new Dealer();
+        dealer.generateCards();
     }
 
     @Test
@@ -37,5 +38,13 @@ class DealerTest {
         var deck = dealer.getDeck();
         assertEquals(51,deck.size());
         assertFalse(deck.contains(card));
+    }
+
+    @Test
+    void shuffle() {
+        var deck = dealer.getDeck().clone();
+        dealer.shuffle();
+        var shuffledDeck = dealer.getDeck();
+        assertNotEquals(deck,shuffledDeck);
     }
 }

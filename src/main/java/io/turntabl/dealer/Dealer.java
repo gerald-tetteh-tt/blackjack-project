@@ -5,6 +5,7 @@ import io.turntabl.card.CardSuit;
 import io.turntabl.card.CardValue;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Dealer {
     // holds a deck of cards
@@ -12,7 +13,6 @@ public class Dealer {
 
     public Dealer() {
         this.deck = new ArrayList<>();
-        generateCards();
     }
 
     public ArrayList<Card> getDeck() {
@@ -21,7 +21,8 @@ public class Dealer {
 
     // generate 52 cards and store them
     // in the deck
-    private void generateCards() {
+    public void generateCards() {
+        deck.clear();
         for(var suit: CardSuit.values()) {
             for(var cardValue: CardValue.values()) {
                 Card card = new Card(suit,cardValue);
@@ -37,5 +38,11 @@ public class Dealer {
         Card card = deck.get(lastIndex);
         deck.remove(lastIndex);
         return card;
+    }
+
+    // shuffle using collections
+    // static method
+    public void shuffle() {
+        Collections.shuffle(this.deck);
     }
 }

@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4806a5c-3b9c-421e-acdc-bfccae6d56cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/turntabl/dealer/Dealer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/turntabl/card/CardTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/turntabl/card/CardValueTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/turntabl/dealer/DealerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/turntabl/game/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/turntabl/gameTable/GameTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/turntabl/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/turntabl/game/GameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/turntabl/gameTable/GameTableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/turntabl/player/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/turntabl/card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/turntabl/card/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/turntabl/dealer/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/turntabl/dealer/Dealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/turntabl/dealer/DealerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/turntabl/dealer/DealerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +64,9 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="io.turntabl.game" />
+      <recent name="io.turntabl.gameTable" />
+      <recent name="io.turntabl.player" />
       <recent name="io.turntabl.dealer" />
       <recent name="io.turntabl.card" />
     </key>
@@ -109,9 +117,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameTableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BlackJack" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.turntabl.gameTable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.turntabl.gameTable" />
+      <option name="MAIN_CLASS_NAME" value="io.turntabl.gameTable.GameTableTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BlackJack" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.turntabl.player.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.turntabl.player" />
+      <option name="MAIN_CLASS_NAME" value="io.turntabl.player.PlayerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DealerTest" />
+        <item itemvalue="JUnit.GameTableTest" />
+        <item itemvalue="JUnit.PlayerTest" />
         <item itemvalue="JUnit.CardTest" />
         <item itemvalue="JUnit.CardValueTest" />
       </list>
