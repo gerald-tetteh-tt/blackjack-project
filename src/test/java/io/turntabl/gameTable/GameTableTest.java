@@ -9,6 +9,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -50,8 +51,10 @@ class GameTableTest {
     @Test
     void goBust() {
         Player player = new Player(2196);
+        ArrayList<Player> bustPlayers = new ArrayList<>();
+        bustPlayers.add(player);
         gameTable.addPlayer(player);
-        gameTable.goBust(player);
+        gameTable.goBust(bustPlayers);
         assertEquals(0,gameTable.getPlayers().size());
         printWriter.println("Player 2196 has gone bust");
         printWriter.println();

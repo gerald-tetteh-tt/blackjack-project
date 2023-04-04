@@ -22,6 +22,15 @@ public class Player {
         return id;
     }
 
+    // add initial two cards at the start of the game
+    public void addInitCards(Card first, Card second) {
+        hand.add(first);
+        hand.add(second);
+        totalValue += first.getValue() + second.getValue();
+        System.out.println("Player " + id + " starts with " + totalValue);
+        System.out.println();
+    }
+
     public void hit(Card card) {
         hand.add(card);
         totalValue += card.getValue();

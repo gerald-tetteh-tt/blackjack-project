@@ -11,9 +11,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,6 +20,7 @@ class PlayerTest {
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
     StringWriter expectedStringWriter;
     PrintWriter printWriter;
+
     @BeforeEach
     void setUp() {
         player = new Player(1);
@@ -65,6 +63,20 @@ class PlayerTest {
        printWriter.println("Player 1 has a hand of 0");
        printWriter.println();
        printWriter.close();
+       assertEquals(expectedStringWriter.toString().trim(), outputStreamCaptor.toString().trim());
+    }
+
+    @Test
+    void addInitCards() {
+        Card card1 = new Card(CardSuit.DIAMONDS, CardValue.FIVE);
+        Card card2 = new Card(CardSuit.HEARTS, CardValue.QUEEN);
+        player.addInitCards(card1, card2);
+        assertEquals(15, player.getTotalValue());
+
+        printWriter.println("Player 1 starts with 15");
+        printWriter.println();
+        printWriter.close();
+        assertEquals(expectedStringWriter.toString().trim(), outputStreamCaptor.toString().trim());
     }
 
     @AfterEach

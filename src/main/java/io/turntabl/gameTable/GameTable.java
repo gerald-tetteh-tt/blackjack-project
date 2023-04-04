@@ -3,6 +3,7 @@ package io.turntabl.gameTable;
 import io.turntabl.player.Player;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class GameTable {
     private final LinkedList<Player> players;
@@ -20,9 +21,11 @@ public class GameTable {
     }
 
     // remove a player from the game
-    public void goBust(Player player) {
-        players.remove(player);
-        System.out.println("Player " + player.getId() + " has gone bust");
-        System.out.println();
+    public void goBust(List<Player> bustPlayers) {
+        players.removeAll(bustPlayers);
+        for(Player player: bustPlayers) {
+            System.out.println("Player " + player.getId() + " has gone bust");
+            System.out.println();
+        }
     }
 }
