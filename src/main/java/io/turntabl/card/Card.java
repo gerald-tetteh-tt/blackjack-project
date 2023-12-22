@@ -5,6 +5,8 @@ package io.turntabl.card;
 
 // another one
 // final testing
+
+/// next test
 public class Card {
     private final CardSuit suit;
     private final CardValue value;
